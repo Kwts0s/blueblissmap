@@ -30,10 +30,10 @@ export const Modal: FC<ModalProps> = ({ landmark, onClose }) => {
 
   if (!landmark.name || !landmark.img) return null;
   return (
-    <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50">
+    <div className="fixed inset-0 backdrop-blur-sm flex items-center justify-center z-50 p-6">
       <div
         ref={modalRef}
-        className="bg-white rounded-lg shadow-xl w-full max-w-md sm:max-w-lg md:max-w-xl mx-4 sm:mx-6 p-6 sm:p-8 flex flex-col h-[85vh] sm:h-[90vh] max-h-[90vh]"
+        className="bg-white rounded-lg shadow-xl w-full max-w-md sm:max-w-lg md:max-w-xl mx-2 sm:mx-6 p-6 sm:p-8 flex flex-col h-[75vh] sm:h-[85vh] max-h-[85vh]"
       >
         <div className="flex justify-between items-center mb-4">
           <h3 className="text-lg sm:text-xl md:text-2xl font-montserrat font-semibold text-gray-800">

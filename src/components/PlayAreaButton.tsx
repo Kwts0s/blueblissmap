@@ -12,7 +12,7 @@ export const PlayAreaButton: FC<PlayAreaButtonProps> = ({
   return (
     <button
       onClick={onToggleLayer}
-      className={`absolute top-4 left-4 z-10 rounded-full p-2  transition-colors ${
+      className={`z-10 rounded-full p-2  transition-colors ${
         isActive ? 'bg-teal-600' : 'bg-[#0BB4AA]'
       }`}
     >

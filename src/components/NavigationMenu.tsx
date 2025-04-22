@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import { PlayAreaButton } from './PlayAreaButton';
 
+
 interface NavigationMenuProps {
   onToggleLayer: () => void;
   isActive: boolean;
@@ -8,7 +9,7 @@ interface NavigationMenuProps {
 
 export const NavigationMenu: FC<NavigationMenuProps> = ({ onToggleLayer, isActive }) => {
   return (
-    <div className="z-10">
+    <div className="absolute top-3 left-4 z-10">
       <PlayAreaButton onToggleLayer={onToggleLayer} isActive={isActive} />
     </div>
   );

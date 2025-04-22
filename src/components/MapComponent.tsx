@@ -87,6 +87,11 @@ const hq: Location[] = [
 const anchorages: Location[] = [
   { lngLat: [20.224354, 39.402483] },
   { lngLat: [20.219571, 39.404198] },
+  { lngLat: [20.100163, 39.365321] },
+  { lngLat: [20.004768, 39.448326] },
+  { lngLat: [19.868421, 39.71585] },
+  { lngLat: [19.895639, 39.63073] },
+  { lngLat: [20.119805,39.382366] },
 ];
 
 const seaPaths: [number, number][][] = [
@@ -95,8 +100,8 @@ const seaPaths: [number, number][][] = [
     [20.207513, 39.400821],
   ],
   [
-    [19.897214,39.636832],
-    [19.879759,39.710945],
+    [19.897214, 39.636832],
+    [19.879759, 39.710945],
   ],
 ];
 export const MapComponent: FC = () => {
@@ -249,7 +254,7 @@ export const MapComponent: FC = () => {
 
   return (
     <>
-    {!isMapLoaded && <Preloader />}
+      {!isMapLoaded && <Preloader />}
       <NavigationMenu onToggleLayer={toggleLayer} isActive={layerVisible} />
       <div ref={mapContainer} className="absolute inset-0 w-full h-full" />
       {isMapLoaded && (
