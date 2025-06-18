@@ -63,6 +63,15 @@ const beaches: Location[] = [
     lngLat: [19.983986, 39.414223],
   },
   { name: "Lefkimmi", img: "/lefk.jpg", lngLat: [20.096971, 39.415188] },
+  {name: 'Seitan Limani',img: "/seitan.jpg", lngLat: [24.193246,35.551554]}, // --- Crete ---
+  {name: 'Kamares',img: "/kamares.png", lngLat: [24.185280,35.520530]},
+  {name: 'Marathi',img: "/marathi.jpg", lngLat: [24.173575,35.504575]},
+  {name: 'Loutraki',img: "/loutraki.jpg", lngLat: [24.163951,35.499177]},
+  {name: 'Souda Isle',img: "/souda.jpg", lngLat: [24.153416,35.489883]},
+  {name: 'Saint John',img: "/aigiannis.jpg", lngLat: [24.124855,35.470182]},
+  {name: 'Omprogialos',img: "/obrogialos.jpg", lngLat: [24.258612,35.425301]},
+
+
 ];
 
 const landmarks: Location[] = [
@@ -82,6 +91,7 @@ const warnings: Location[] = [
 const hq: Location[] = [
   { lngLat: [20.119202, 39.382266] },
   { lngLat: [19.896682, 39.630671] },
+  { lngLat: [24.203508, 35.450493]}
 ];
 
 const anchorages: Location[] = [
@@ -92,6 +102,10 @@ const anchorages: Location[] = [
   { lngLat: [19.868421, 39.71585] },
   { lngLat: [19.895639, 39.63073] },
   { lngLat: [20.119805,39.382366] },
+  { lngLat: [24.186436,35.520131] }, // --- Crete --
+  { lngLat: [24.173197,35.504363] },
+  { lngLat: [24.164359,35.499159] },
+  { lngLat: [24.258483,35.425904] },
 ];
 
 const seaPaths: [number, number][][] = [
