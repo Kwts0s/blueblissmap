@@ -8,6 +8,7 @@ import { HQMarker } from "./HQMarker";
 import { Modal } from "./Modal";
 import { AnchorageMarker } from "./AnchorageMarker";
 import { SeaPath } from "./SeaPath";
+import { RestrictedArea } from "./RestrictedArea";
 import { Preloader } from "./Preloader";
 
 interface Location {
@@ -70,6 +71,7 @@ const beaches: Location[] = [
   {name: 'Souda Isle',img: "/souda.jpg", lngLat: [24.153416,35.489883]},
   {name: 'Saint John',img: "/aigiannis.jpg", lngLat: [24.124855,35.470182]},
   {name: 'Omprogialos',img: "/obrogialos.jpg", lngLat: [24.258612,35.425301]},
+  {name: 'Almyrida',img: "/almyrida.jpg", lngLat: [24.200832,35.450069]},
 
 
 ];
@@ -86,12 +88,19 @@ const warnings: Location[] = [
   { lngLat: [20.241787, 39.396721] },
   { lngLat: [20.213326, 39.446123] },
   { lngLat: [20.070584, 39.46504] },
+  { lngLat: [24.196275,35.451747] },
+  { lngLat: [24.193686,35.451092] },
+  { lngLat: [24.194491,35.453539] },
+  { lngLat: [24.183880,35.451293] },
+  { lngLat: [24.181015,35.452560] },
+  { lngLat: [24.124831,35.470334] },
+  { lngLat: [24.164557,35.499251] },
 ];
 
 const hq: Location[] = [
   { lngLat: [20.119202, 39.382266] },
   { lngLat: [19.896682, 39.630671] },
-  { lngLat: [24.203508, 35.450493]}
+  { lngLat: [24.203621,35.450873]}
 ];
 
 const anchorages: Location[] = [
@@ -104,7 +113,7 @@ const anchorages: Location[] = [
   { lngLat: [20.119805,39.382366] },
   { lngLat: [24.186436,35.520131] }, // --- Crete --
   { lngLat: [24.173197,35.504363] },
-  { lngLat: [24.164359,35.499159] },
+  // { lngLat: [24.164359,35.499159] },
   { lngLat: [24.258483,35.425904] },
 ];
 
@@ -118,6 +127,22 @@ const seaPaths: [number, number][][] = [
     [19.879759, 39.710945],
   ],
 ];
+
+const restrictedAreas: [number, number][][] = [
+  [
+    [24.165115,35.464165],
+    [24.175930,35.478006],
+    [24.179535,35.463816],
+    [24.165115,35.464165],
+  ],
+  [
+    [24.157047,35.494989],
+    [24.156833,35.483562],
+    [24.135461,35.484296],
+    [24.157047,35.494989]
+  ]
+];
+
 export const MapComponent: FC = () => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<mapboxgl.Map | null>(null);
@@ -318,6 +343,11 @@ export const MapComponent: FC = () => {
             isVisible={layerVisible}
             zoom={zoom}
             paths={seaPaths}
+          />
+          <RestrictedArea
+            map={map.current}
+            zoom={zoom}
+            areas={restrictedAreas}
           />
         </>
       )}
