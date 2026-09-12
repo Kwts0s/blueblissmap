@@ -68,7 +68,7 @@ const beaches: Location[] = [
   {name: 'Kamares',img: "/kamares.png", lngLat: [24.185280,35.520530]},
   {name: 'Marathi',img: "/marathi.jpg", lngLat: [24.173575,35.504575]},
   {name: 'Loutraki',img: "/loutraki.jpg", lngLat: [24.163951,35.499177]},
-  {name: 'Souda Isle',img: "/souda.jpg", lngLat: [24.153416,35.489883]},
+  // {name: 'Souda Isle',img: "/souda.jpg", lngLat: [24.153416,35.489883]},
   {name: 'Saint John',img: "/aigiannis.jpg", lngLat: [24.124855,35.470182]},
   {name: 'Omprogialos',img: "/obrogialos.jpg", lngLat: [24.258612,35.425301]},
   {name: 'Almyrida',img: "/almyrida.jpg", lngLat: [24.200832,35.450069]},
@@ -112,7 +112,7 @@ const anchorages: Location[] = [
   { lngLat: [19.895639, 39.63073] },
   { lngLat: [20.119805,39.382366] },
   { lngLat: [24.186436,35.520131] }, // --- Crete --
-  { lngLat: [24.173197,35.504363] },
+  // { lngLat: [24.173197,35.504363] },
   // { lngLat: [24.164359,35.499159] },
   { lngLat: [24.258483,35.425904] },
 ];
@@ -140,6 +140,16 @@ const restrictedAreas: [number, number][][] = [
     [24.156833,35.483562],
     [24.135461,35.484296],
     [24.157047,35.494989]
+  ],
+  [
+    [24.285107,35.377994],
+    [24.282360,35.432841],
+    [24.223652,35.463886],
+    [24.222622,35.481780],
+    [24.237728,35.502465],
+    [24.405270,35.496596],
+    [24.427242,35.388630],
+    [24.285107,35.377994]
   ]
 ];
 
