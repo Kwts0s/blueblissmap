@@ -17,7 +17,7 @@ const FILL_LAYER_ID = 'restricted-area-fill-layer';
 const HATCH_LAYER_ID = 'restricted-area-hatch-layer';
 const OUTLINE_LAYER_ID = 'restricted-area-outline-layer';
 const PATTERN_ID = 'restricted-area-hatch-pattern';
-const ZOOM_THRESHOLD = 13;
+const ZOOM_THRESHOLD = 12;
 
 const closeRing = (ring: Position[]): Position[] => {
   if (ring.length === 0) return ring;
